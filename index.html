@@ -2,16 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⚡️ Сайт всё!!!</title>
     <style>
-  
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background: #182533;
-            margin: 40px;  
-            padding: 0px 0px;
+            margin: 40px;
+            padding: 0;
             min-height: 2vh;
             display: flex;
             flex-direction: column;
@@ -21,28 +19,26 @@
 
         .container-wrapper {
             position: relative;
-            width: 90%;
-            max-width: 760px;
+            width: 760px; /* Фиксированная ширина вместо 90% */
         }
 
         .container {
-            max-width: 760px;
-            width: 100%;
-            background: #1c3345; 
+            width: 760px; /* Фиксированная ширина */
+            background: #1c3345;
             padding: 32px;
             border-radius: 20px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            text-align: left; /* Текст по левому краю */
+            text-align: left;
         }
 
         .logo-circle {
             position: absolute;
             top: 0;
-            left: -72px; /* Отступ от контейнера */
+            left: -72px;
             width: 60px;
             height: 60px;
-            border-radius: 50%; /* Делаем круг */
-            background: #47a3f5; /* Цвет фона круга */
+            border-radius: 50%;
+            background: #47a3f5;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -51,13 +47,13 @@
         }
 
         .logo-circle:hover {
-            transform: scale(1.1); /* Увеличение при наведении */
-            background: #70baf5; /* Изменение цвета при наведении */
+            transform: scale(1.1);
+            background: #70baf5;
         }
 
         .logo-circle img {
-            width: 64px; /* Размер иконки внутри круга */
-            height: 64px;      
+            width: 64px;
+            height: 64px;
             object-fit: contain;
         }
 
@@ -66,14 +62,14 @@
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 8px;
-            margin-top: -10px; /* Отступ сверху для заголовка */
+            margin-top: -10px;
         }
 
         #result {
             font-size: 1.6rem;
             font-weight: 580;
             line-height: 1.2;
-            margin: 10px 10px; /* Отступы сверху и снизу для блока результата */
+            margin: 10px 10px;
             color: #ffffff;
         }
 
@@ -88,8 +84,8 @@
             border-radius: 50px;
             transition: background 0.3s;
             display: block;
-            margin: 12px auto; /* Кнопка по центру */
-            width: 200px; /* Фиксированная ширина для лучшего центрирования */
+            margin: 12px auto;
+            width: 200px; /* Фиксированная ширина кнопки */
         }
 
         button:hover {
@@ -97,55 +93,55 @@
         }
 
         .author {
-            margin-top: -7px; /* Увеличенный отступ сверху для автора */
+            margin-top: -7px;
             margin-bottom: -14px;
             color: #7f8c8d;
             font-size: 0.8rem;
             font-weight: 100;
-            text-align: right; /* Текст автора по правому краю */
+            text-align: right;
         }
+
         .clown-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 2px;
-    margin: 10px 0;
-}
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+            margin: 10px 0;
+        }
 
-.clown-btn {
-    background: #17649b;
-    color: #53c9ff;
-    border: none;
-    padding: 6px 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: all 0.1s;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .clown-btn {
+            background: #17649b;
+            color: #53c9ff;
+            border: none;
+            padding: 6px 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.clown-btn:hover {
-    background: #126bb9;
-    transform: translateY(0px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+        .clown-btn:hover {
+            background: #126bb9;
+            transform: translateY(0px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
 
-.clown-btn:active {
-    transform: translateY(0);
-}
+        .clown-btn:active {
+            transform: translateY(0);
+        }
 
-.count {
-    font-size: 1,2rem;
-    font-weight: bold;
-    min-width: 24px;
-    text-align: center;
-}
-
+        .count {
+            font-size: 1.2rem; /* Исправлено: запятая заменена на точку */
+            font-weight: bold;
+            min-width: 24px;
+            text-align: center;
+        }
     </style>
 </head>
-<body> 
+<body>
     <div class="container-wrapper">
         <!-- Кликабельное изображение в круге -->
         <div class="logo-circle" id="logoBtn">
@@ -154,29 +150,29 @@
 
         <div class="container">
             <h1>РЕЙБ - Фейковые новости</h1>
-            
+
             <div id="result">⚡️ С <span id="day">1</span>го <span id="month">января</span> в России будет запрещено <span id="reason">использовать бумажные книги</span>
             </div>
             <div class="clown-buttons">
-    <button class="clown-btn" data-count="0">
-        🤡 <span class="count">100</span>
-    </button>
-    <button class="clown-btn" data-count="0">
-        👍 <span class="count">100</span>
-    </button>
-    <button class="clown-btn" data-count="0">
-        👎 <span class="count">100</span>
-    </button>
-    <button class="clown-btn" data-count="0">
-        🗿 <span class="count">100</span>
-    </button>
-    <button class="clown-btn" data-count="0">
-        🤣 <span class="count">100</span>
-    </button>
-</div>
-            
+                <button class="clown-btn" data-count="0">
+                    🤡 <span class="count">100</span>
+        </button>
+                <button class="clown-btn" data-count="0">
+            👍 <span class="count">100</span>
+        </button>
+                <button class="clown-btn" data-count="0">
+            👎 <span class="count">100</span>
+        </button>
+                <button class="clown-btn" data-count="0">
+            🗿 <span class="count">100</span>
+        </button>
+                <button class="clown-btn" data-count="0">
+            🤣 <span class="count">100</span>
+        </button>
+            </div>
+
             <button id="generateBtn">ЗАПРЕТИТЬ</button>
-            
+
             <div class="author">Ник Рейб. 2026г.</div>
         </div>
     </div>
@@ -193,6 +189,7 @@
 
         // Фильтруем месяцы — берём только те, что идут после текущего
         const months = allMonths.slice(currentMonthIndex + 1);
+
 
         // Если после текущего месяца нет других месяцев (например, декабрь), используем все месяцы
         if (months.length === 0) {
@@ -298,7 +295,6 @@
             'планирование более чем на 2 месяца вперед.',
             'переглядывания между незнакомцами дольше 2,3 секунды.',
             '***** ****, ****** ****** * ****, * ****** ** *****.',
-            
         ];
 
         // Функция для получения случайного числа от 1 до 30
